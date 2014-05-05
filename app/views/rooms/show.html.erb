@@ -1,0 +1,86 @@
+<div id="topbar">
+	<%= link_to "*", "#", class: "open_categories_chooser" %>
+	<h1><%= @room.name %></h1>
+</div>
+
+<div id="header_row">
+	<table class="member_table">
+		<thead>
+			<tr>
+				<th class="first"><%= text_field_tag :q, "", placholder: "Search...", autocomplete: :off %></th>
+				<th><a href="#">
+					<span class="day">Mon</span>
+					<span class="date">Apr 12</span>
+				</a></th>
+				<th><a href="#">
+					<span class="day">Wed</span>
+					<span class="date">Apr 15</span>
+				</a></th>
+				<th><a href="#">
+					<span class="day">Fri</span>
+					<span class="date">Apr 22</span>
+				</a></th>
+				<th><a href="#">
+					<span class="day">Sun</span>
+					<span class="date">Apr 25</span>
+				</a></th>
+				<th><a href="#">
+					<span class="day">Sun</span>
+					<span class="date">May 1</span>
+				</a></th>
+				<th class="last"><a href="#">+</a></th>
+			</tr>
+		</thead>
+	</table>
+</div>
+
+<div id="members">
+	<table class="member_table">
+		<tbody>
+			<% 20.times do %>
+				<% ["Dallas Read", "Melanie Read", "Owen Read"].each do |name| %>
+					<tr>
+						<td class="first"><%= name %></td>
+						<td class="presence_toggle present"><a href="#">
+							<span class="here">&check;</span>
+							<span class="not_here">&nbsp;</span>
+						</a></td>
+						<td class="presence_toggle present"><a href="#">
+							<span class="here">&check;</span>
+							<span class="not_here">&nbsp;</span>
+						</a></td>
+						<td class="presence_toggle"><a href="#">
+							<span class="here">&check;</span>
+							<span class="not_here">&nbsp;</span>
+						</a></td>
+						<td class="presence_toggle present"><a href="#">
+							<span class="here">&check;</span>
+							<span class="not_here">&nbsp;</span>
+						</a></td>
+						<td class="presence_toggle"><a href="#">
+							<span class="here">&check;</span>
+							<span class="not_here">&nbsp;</span>
+						</a></td>
+						<td class="here last"></td>
+					</tr>
+				<% end %>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div id="footer_row">
+	<table class="member_table">
+		<thead>
+			<tr>
+				<th class="first">Total</th>
+				<th><a href="#">35</a></th>
+				<th><a href="#">43</a></th>
+				<th><a href="#">0</a></th>
+				<th><a href="#">42</a></th>
+				<th><a href="#">0</a></th>
+				<th class="last"></th>
+			</tr>
+		</thead>
+	</table>
+</div>
